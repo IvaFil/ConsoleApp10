@@ -10,22 +10,33 @@ namespace ConsoleApp10
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[10];
+            double[] arr = new double[10];
+
+            Console.WriteLine("Введи максимальный элемент: ");
+            double min = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введи минимальный элемент: ");
+            double max = Convert.ToDouble(Console.ReadLine());
 
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = new Random().Next(0, 100);
+                arr[i] = new Random().NextDouble();
             }
 
-            int sum = 0;
+            double sum = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                if (i % 2 == 1)
+                if (arr[i]>max)
                 {
-                    sum += arr[i];
+                    max = arr[i];
 
                 }
+                if (arr[i]<min)
+                {
+                    min = arr[i];
+                }
             }
+            sum = max - min;
             Console.WriteLine(sum);
         }
     }
