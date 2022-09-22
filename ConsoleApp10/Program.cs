@@ -14,15 +14,15 @@ namespace ConsoleApp10
 
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = new Random().Next(100, 1000);
+                arr[i] = new Random().Next(0, 100);
             }
 
             int sum = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] % 2 == 0)
+                if (i % 2 == 1)
                 {
-                    sum++;
+                    sum += arr[i];
 
                 }
             }
