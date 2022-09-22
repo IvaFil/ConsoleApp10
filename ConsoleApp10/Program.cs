@@ -10,7 +10,23 @@ namespace ConsoleApp10
     {
         static void Main(string[] args)
         {
+            int[] arr = new int[10];
 
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = new Random().Next(100, 1000);
+            }
+
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    sum++;
+
+                }
+            }
+            Console.WriteLine(sum);
         }
     }
 }
